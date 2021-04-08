@@ -1,14 +1,24 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Register from './components/Regsiter'
 
 import "./app.styles.scss";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="app-container">
-        Webpack 5 boilerplate for react using babel, sass, with a hot dev server
-        and an optimized production build.
-      </div>
+      <Router>
+        <switch>
+          <Route path="/">
+            <Register/>
+          </Route>
+        </switch>
+      </Router>
     );
   }
 }
