@@ -14,16 +14,14 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <switch>
+        <Switch>
           <Route path="/">
             <LandPage/>
           </Route>
-        </switch>
-        <switch>
-          <Route path="/Register">
+          <Route path="/register">
             <Register/>
           </Route>
-        </switch>
+        </Switch>
       </Router>
     );
   }
