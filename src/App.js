@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import Register from './components/Regsiter'
-import Landing from './components/Landing'
+import LandPage from './components/LandPage'
 
 import "./app.styles.scss";
 
@@ -16,7 +16,7 @@ class App extends React.Component {
       <Router>
         <switch>
           <Route path="/">
-            <Landing/>
+            <LandPage/>
           </Route>
         </switch>
         <switch>
