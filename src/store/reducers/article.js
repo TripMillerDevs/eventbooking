@@ -6,13 +6,18 @@ const intialState = {
 
 
 function articleReducer (state = intialState, action) {
-  console.log(action);
   switch (action.type) {
     case ADD_ARTICLE:
-      state.articles.push(action.payload);
+      return {
+        articles: [
+          ...state.articles,
+          action.payload
+        ]
+      }
       break;
+    default:
+      return state;
   }
-  return state;
 }
 
 export default articleReducer;

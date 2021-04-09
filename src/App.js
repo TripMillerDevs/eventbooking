@@ -12,7 +12,7 @@ import "./app.styles.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const LandPage = lazy(() => import('./components/LandPage'));
-const Register = lazy(() => import('./components/Regsiter'));
+const Register = lazy(() => import('./components/Register'));
 const EventList = lazy(() => import('./components/EventList'));
 
 class App extends React.Component {
