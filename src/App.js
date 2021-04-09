@@ -1,17 +1,20 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-import Register from './components/Regsiter'
-import LandPage from './components/LandPage'
-import EventList from './components/EventList'
+
 import Header from './components/core/Header'
 import Footer from './components/core/Footer'
 import "./app.styles.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+const LandPage = lazy(() => import('./components/LandPage'));
+const Register = lazy(() => import('./components/Regsiter'));
+const EventList = lazy(() => import('./components/EventList'));
 
 class App extends React.Component {
   render() {
@@ -19,17 +22,13 @@ class App extends React.Component {
       <Router>
         <Header/>
         <div className="page-section">
+        <Suspense fallback={<div>Loading...</div>}>
           <Switch>
-            <Route path="/list">
-              <EventList />
-            </Route>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/">
-              <LandPage />
-            </Route>
+            <Route exact path="/" component={LandPage}/>
+            <Route path="/register" component={Register}/>
+            <Route path="/list" component={EventList}/>
           </Switch>
+        </Suspense>
         </div>
         <Footer/>
       </Router>
