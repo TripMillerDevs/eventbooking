@@ -1,13 +1,13 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
-import { loadState, saveState } from './localStorage';
+// import { loadState, saveState } from './localStorage';
 import rootReducer from "./reducers";
 const middleware = [reduxThunk];
 
-const persistedState = loadState();
+// const persistedState = loadState();
 const store = createStore(
   rootReducer,
-  persistedState,
+  // persistedState,
   compose(
     applyMiddleware(...middleware),
     (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ &&
@@ -16,8 +16,8 @@ const store = createStore(
   )
 );
 
-store.subscribe(() => {
-  saveState(store.getState());
-})
+// store.subscribe(() => {
+//   saveState(store.getState());
+// })
 
 export default store;
