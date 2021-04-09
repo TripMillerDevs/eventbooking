@@ -10,7 +10,7 @@ import Header from './components/core/Header'
 import Footer from './components/core/Footer'
 import "./app.styles.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 const LandPage = lazy(() => import('./components/LandPage'));
 const Register = lazy(() => import('./components/Regsiter'));
