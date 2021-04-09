@@ -6,20 +6,22 @@ import { Container, Row, Col } from 'react-bootstrap';
 const ArticleForm = (props) => {
   const [imgUrl, setImgUrl] = useState(null);
   const [articleText, setArticleText] = useState('');
+  const [image, setImage] = useState(null);
   const setImgToUpload = (evt) => {
     setImgUrl(URL.createObjectURL(evt.target.files[0]));
+    setImage(evt.target.files[0]);
   }
   const onChangeText = (evt) => {
     setArticleText(evt.target.value);
   }
   const addArticle = () => {
     props.addArticle({
-      image: imgUrl,
+      image: image,
       text: articleText
     })
     setImgUrl(null);
     setArticleText('');
-
+    setImage(null);
   }
   return (
     <Container>

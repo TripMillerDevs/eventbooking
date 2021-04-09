@@ -3,9 +3,9 @@ import React from 'react';
 const ArticleView = (props) => {
   return (
     <div>
-      <img src={props.img}/>
-      <div>{ props.text }</div>
+      {props.image}-{props.text}
     </div>
   )
 }
+
 export default ArticleView;
