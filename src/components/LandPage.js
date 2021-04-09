@@ -1,12 +1,10 @@
 import React from "react";
 
 
-import "./style/landPage.styles.scss";
-
 const LandPage = () => {
   return (
     <div>
-      <button className="btn-register">Regsiter Now</button>
+      <h1>Landscape</h1>
     </div>
   )
 }

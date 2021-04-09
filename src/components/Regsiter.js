@@ -1,9 +1,12 @@
 import React from "react";
 
-
+import './style/register.styles.scss';
 const Register = () => {
   return (
-    <h1>Register</h1>
+    <div>
+      <button className="btn-register">Regsiter Now</button>
+    </div>
+    
   )
 }
 
