@@ -7,21 +7,26 @@ import {
 } from "react-router-dom";
 import Register from './components/Regsiter'
 import LandPage from './components/LandPage'
-
+import Header from './components/core/Header'
+import Footer from './components/core/Footer'
 import "./app.styles.scss";
 
 class App extends React.Component {
   render() {
     return (
       <Router>
-       <Switch>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/">
-            <LandPage />
-          </Route>
-        </Switch>
+        <Header/>
+        <div className="page-section">
+          <Switch>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="/">
+              <LandPage />
+            </Route>
+          </Switch>
+        </div>
+        <Footer/>
       </Router>
     );
   }

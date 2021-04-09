@@ -1,0 +1,17 @@
+.btn-register {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 25px;
+  width: 140px;
+  font-size: 10px;
+  background-color: #c4c4c4;
+  border-radius: 70px;
+  border: none;
+}
+.btn-register:hover {
+  background-color: gray;
+  color: white;
+  box-shadow: 0px 5px 5px #999999;
+}
