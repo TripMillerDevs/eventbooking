@@ -6,7 +6,6 @@ import './style/register.styles.scss';
 const Register = () => {
   return (
     <div>
-      <button className="btn-register">Regsiter Now</button>
       <div className="register-form">
         <Suspense fallback={<div>Loading...</div>}>
           <ArticleForm/>

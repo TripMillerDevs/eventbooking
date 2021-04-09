@@ -1,14 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 
-
-const EventList = () => {
+const EventList = (props) => {
   return (
-    <h1>
-      EventList
-    </h1>
+    <div>
+      {props.articles}
+    </div>
   )
 }
 
-
-export default EventList;
+const mapStateToProps = state => ({
+  articles: state.article.ariticles
+})
+export default connect (mapStateToProps) (EventList);

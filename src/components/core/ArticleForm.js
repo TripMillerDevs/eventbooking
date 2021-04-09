@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { addArticle } from '../../action';
 import { Container, Row, Col } from 'react-bootstrap';
 
-const ArticleForm = () => {
+const ArticleForm = (props) => {
   const [imgUrl, setImgUrl] = useState(null);
   const [articleText, setArticleText] = useState('');
   const setImgToUpload = (evt) => {
@@ -10,8 +12,20 @@ const ArticleForm = () => {
   const onChangeText = (evt) => {
     setArticleText(evt.target.value);
   }
+  const addArticle = () => {
+    props.addArticle({
+      image: imgUrl,
+      text: articleText
+    })
+    setImgUrl(null);
+    setArticleText('');
+
+  }
   return (
     <Container>
+      <Row>
+        <button className="btn-register" onClick={addArticle}>Regsiter Now</button>
+      </Row>
       <Row>
         <Col>
           <div>
@@ -34,4 +48,4 @@ const ArticleForm = () => {
   )
 }
 
-export default ArticleForm;
+export default connect ( null, { addArticle }) (ArticleForm);
