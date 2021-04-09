@@ -3,8 +3,12 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const ArticleForm = () => {
   const [imgUrl, setImgUrl] = useState(null);
+  const [articleText, setArticleText] = useState('');
   const setImgToUpload = (evt) => {
     setImgUrl(URL.createObjectURL(evt.target.files[0]));
+  }
+  const onChangeText = (evt) => {
+    setArticleText(evt.target.value);
   }
   return (
     <Container>
@@ -22,7 +26,7 @@ const ArticleForm = () => {
           </div>
         </Col>
         <Col>
-        
+          <textarea className="input-textarea" value={articleText} onChange={onChangeText} />
         </Col>
       </Row>
     </Container>
