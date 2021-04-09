@@ -1,7 +1,6 @@
 import React from "react";
 
 
-
 import "./style/landPage.styles.scss";
 
 const LandPage = () => {

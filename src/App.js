@@ -10,6 +10,7 @@ import LandPage from './components/LandPage'
 import Header from './components/core/Header'
 import Footer from './components/core/Footer'
 import "./app.styles.scss";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   render() {
