@@ -12,6 +12,7 @@ const Header = () => {
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item href="/">Home</Dropdown.Item>
+            <Dropdown.Item href="/list">Event List</Dropdown.Item>
             <Dropdown.Item href="/register">Register</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

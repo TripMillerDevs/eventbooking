@@ -1,13 +1,24 @@
 import React from 'react';
 import PageDelimiter from './ArticleDelimiter';
 
+import '../style/footer.styles.scss';
 const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-divider"/>
+      <div className="footer-address">
+        <div>
+          Email: example@gmail.com
+        </div>
+        <div>
+          Phone: 444-444-4444
+        </div>
+        <div>
+          Addr:
+        </div>
+      </div>
       <PageDelimiter/>
     </div>
-    
   )
 }
 
