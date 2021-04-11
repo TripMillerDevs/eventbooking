@@ -1,23 +1,23 @@
 import { ADD_EVENT, GET_EVENTS } from '../../action/action-type'
 
 const intialState = {
-  articles: []
+  events: []
 };
 
 
-function articleReducer (state = intialState, action) {
+function eventReducer (state = intialState, action) {
   switch (action.type) {
     case ADD_EVENT:
       return {
         articles: [
-          ...state.articles,
+          ...state.events,
           action.payload
         ]
       }
       break;
     case GET_EVENTS:
       return {
-        articles: action.payload
+        events: action.payload
       }
       break;
     default:
@@ -25,4 +25,4 @@ function articleReducer (state = intialState, action) {
   }
 }
 
-export default articleReducer;
+export default eventReducer;

@@ -1,15 +1,18 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { connect } from 'react-redux';
-// import ArticleView from './core/ArticleView'
-const ArticleView = lazy(() => import('./core/EventView'))
+import store from '../store';
+import { getEvents } from '../action';
+const EventView = lazy(() => import('./core/EventView'))
 const EventList = (props) => {
-  console.log(props);
+  useEffect(()=>{
+    store.dispatch(getEvents());
+  }, [])
   return (
     <div>
       <Suspense fallback={<div>Loading...</div>}>
         {
-          props.articles.map((item, i) => 
-            <ArticleView image={item.image} text={item.text} key={i}/>
+          props.events.map((item, i) => 
+            <EventView image={item.image} text={item.text} key={i}/>
           )
         }
       </Suspense>
@@ -18,6 +21,6 @@ const EventList = (props) => {
 }
 
 const mapStateToProps = state => ({
-  articles: state.article.articles
+  events: state.event.events
 })
-export default connect ( mapStateToProps) (EventList);
+export default connect ( mapStateToProps, {getEvents: getEvents}) (EventList);

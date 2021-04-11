@@ -3,6 +3,6 @@ import eventReducer from './event'
 
 export default combineReducers(
   {
-    article: eventReducer
+    event: eventReducer
   }
 ) 
