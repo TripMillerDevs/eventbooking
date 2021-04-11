@@ -23,4 +23,4 @@ const EventList = (props) => {
 const mapStateToProps = state => ({
   events: state.event.events
 })
-export default connect ( mapStateToProps, {getEvents: getEvents}) (EventList);
+export default connect ( mapStateToProps ) (EventList);
