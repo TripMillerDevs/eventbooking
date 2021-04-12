@@ -5,9 +5,10 @@
 }
 .img-event {
   height: 200px;
-  border: 1px solid #c4c4c4;
+  // border: 1px solid #c4c4c4;
   width: 300px;
   object-fit: contain;
+  background-color: #f9f9f9;
 }
 .text-event-min {
   padding: 15px;
@@ -31,6 +32,9 @@
   left: 50%;
   transform: translate(-50%);
   overflow-x: scroll;
+}
+.event-item {
+  border: none;
 }
 .btn-readmore {
   position: absolute;

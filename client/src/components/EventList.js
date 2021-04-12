@@ -16,7 +16,7 @@ const EventList = (props) => {
         <Suspense fallback={<div>Loading...</div>}>
           {
             props.events.map((item, i) => 
-              <ListGroup.Item>
+              <ListGroup.Item className="event-item">
                 <EventView image={item.image} text={item.text} key={i}/>
               </ListGroup.Item>
             )
