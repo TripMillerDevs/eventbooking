@@ -10,6 +10,8 @@ yarn start
 
 cd eventbooking-api
 
+mkdir images
+
 yarn or yarn install
 
-yarn serve or yarn dev
+yarn start or yarn dev
