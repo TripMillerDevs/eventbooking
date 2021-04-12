@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from "react";
 
 const ArticleForm = lazy(() => import('./core/EventForm'));
 
-import './style/register.styles.scss';
+import './styles/register.styles.scss';
 const Register = () => {
   return (
     <div>

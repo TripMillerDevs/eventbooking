@@ -4,7 +4,7 @@ import store from '../store';
 import { getEvents } from '../action';
 import { ListGroup } from 'react-bootstrap';
 
-import './style/eventList.styles.scss';
+import './styles/eventList.styles.scss';
 
 const EventView = lazy(() => import('./core/EventView'))
 const EventList = (props) => {
@@ -13,15 +13,15 @@ const EventList = (props) => {
   }, [])
   return (
     <ListGroup horizontal className="events-list">
-        <Suspense fallback={<div>Loading...</div>}>
-          {
-            props.events.map((item, i) => 
-              <ListGroup.Item className="event-item">
-                <EventView image={item.image} text={item.text} key={i}/>
-              </ListGroup.Item>
-            )
-          }
-        </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        {
+          props.events.map((item, i) => 
+            <ListGroup.Item className="event-item">
+              <EventView image={item.image} text={item.text} key={i}/>
+            </ListGroup.Item>
+          )
+        }
+      </Suspense>
     </ListGroup>
   )
 }

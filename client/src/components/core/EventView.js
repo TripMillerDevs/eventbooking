@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-
+import '../styles/eventcard.styles.scss';
 const EventView = (props) => {
   const [readMore, setReadMore] = useState(false);
   const setReadWay = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dropdown} from 'react-bootstrap';
 import { ArrowDown } from 'react-bootstrap-icons';
-import "../style/header.styles.scss";
+import "../styles/header.styles.scss";
 const Header = () => {
   return (
     <div className="header-container">

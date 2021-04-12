@@ -3,6 +3,7 @@
   min-height: 260px;
   padding-bottom: 15px;
 }
+
 .img-event {
   height: 200px;
   // border: 1px solid #c4c4c4;
@@ -24,17 +25,6 @@
   font-size: 12px;
   overflow-y: scroll;
 
-}
-.events-list {
-  position: absolute;
-  width: 90%;
-  top: 50px;
-  left: 50%;
-  transform: translate(-50%);
-  overflow-x: scroll;
-}
-.event-item {
-  border: none;
 }
 .btn-readmore {
   position: absolute;

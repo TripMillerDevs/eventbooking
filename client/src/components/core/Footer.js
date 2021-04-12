@@ -1,7 +1,7 @@
 import React from 'react';
 import PageDelimiter from './ArticleDelimiter';
 
-import '../style/footer.styles.scss';
+import '../styles/footer.styles.scss';
 const Footer = () => {
   return (
     <div className="footer">
