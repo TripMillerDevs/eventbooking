@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import '../styles/eventcard.styles.scss';
+const base_url = "http://localhost:3000"
 const EventView = (props) => {
   const [readMore, setReadMore] = useState(false);
   const setReadWay = () => {
@@ -12,7 +13,7 @@ const EventView = (props) => {
         <Container className="event-container">
           <Row>
             <Col>
-              <img className="img-event" src={`http://localhost:3000/${props.image}`}/>
+              <img className="img-event" src={`${base_url}/${props.image}`}/>
             </Col>
             <Col>
               <div className={readMore ? 'text-event': 'text-event-min'}>
