@@ -4,7 +4,7 @@
   "description": "National Missing and Unidentified Persons Kenya",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development API_URL=http://localhost:3000 webpack serve --config config/webpack.dev.js",
+    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "lint": "eslint src --ext .jsx --ext .js",
     "predeploy": "npm run build",
@@ -51,7 +51,6 @@
     "react-bootstrap-icons": "^1.4.0",
     "react-dom": "^16.14.0",
     "react-lazyload": "^3.2.0",
-    "react-multi-carousel": "^2.6.2",
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
