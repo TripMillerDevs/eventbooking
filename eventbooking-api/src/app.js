@@ -11,8 +11,8 @@ const { authLimiter } = require('./middlewares/rateLimiter');
 const routes = require('./routes/v1');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
-const { models } = require('mongoose');
-
+// const { models } = require('mongoose');
+const path = require('path');
 const app = express();
 
 if (config.env !== 'test') {
@@ -40,7 +40,9 @@ app.use(compression());
 app.use(cors());
 app.options('*', cors());
 
-// jwt authentication
+// image folder assign
+app.use(express.static( path.join(__dirname,'..', 'images')));
+// console.log('image folder:',path.join(__dirname,'..', 'images'));
 
 
 // limit repeated failed requests to auth endpoints
