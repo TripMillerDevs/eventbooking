@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import store from '../store';
 import { getEvents } from '../action';
 import './styles/landpage.styles.scss';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, ListGroup } from 'react-bootstrap';
 import EventView from './core/EventView';
 // const EventView = lazy(() => import('./core/EventView'))
 const LandPage = (props) => {
@@ -18,9 +18,16 @@ const LandPage = (props) => {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {
-         props.events.map((item, i) => 
+         props.events.slice(0, props.events.length-1).map((item, i) => 
           <Carousel.Item key={i}>
-            <EventView image={item.image} text={item.text}/>
+            <ListGroup horizontal className="events-list">
+              <ListGroup.Item className="event-item">
+                <EventView image={props.events[i].image} text={props.events[i].text}/>
+              </ListGroup.Item>
+              <ListGroup.Item className="event-item">
+                <EventView image={props.events[i+1].image} text={props.events[i+1].text}/>
+              </ListGroup.Item>
+            </ListGroup>                      
           </Carousel.Item>
         )
       }
