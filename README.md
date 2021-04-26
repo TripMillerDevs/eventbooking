@@ -15,3 +15,6 @@ mkdir images
 yarn or yarn install
 
 yarn start or yarn dev
+
+
+doc https://docs.google.com/document/d/1uZ12l82jjX4b2ZLswvydSa93qMnAG9qJMGsKsRosdlQ/edit
